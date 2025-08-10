@@ -1,0 +1,27 @@
+venv\Scripts\activate
+
+python examples/demo_run.py
+
+python examples/complex_demo.py --model "models/gemini-1.5-flash-latest"
+
+
+python examples/complex_demo.py --config json
+
+# TXT
+python examples/profile_from_file_demo.py \
+       --file samples/layla_profile.txt \
+       --config json \
+       --model "models/gemini-1.5-flash-latest"
+
+# PDF (same content)
+python examples/profile_from_file_demo.py \
+       --file samples/layla_profile.pdf
+
+# Load TXT profile, default YAML config
+python examples/profile_from_file_demo.py --file samples/layla_profile.txt
+
+# Load json profile, default YAML config
+>python examples/profile_from_file_demo.py --file samples/multi_profiles.json
+
+# Load json profile, Json config
+python examples/profile_from_file_demo.py --file samples/multi_profiles.json --config json
