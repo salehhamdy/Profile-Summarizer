@@ -15,7 +15,6 @@ except ImportError:
 
 import google.generativeai as genai
 
-
 # ────────────────────────── CONFIG LOADER ─────────────────────────────
 def load_config(path: str | Path, _depth: int = 0) -> Dict[str, Any]:
     if _depth > 3:
@@ -78,7 +77,6 @@ def _infer(val: str) -> Any:
         return float(val) if "." in val else int(val)
     except ValueError:
         return val
-
 
 # ────────────────────────── MAIN AGENT ────────────────────────────────
 class ProfileSummarizerAgent:
